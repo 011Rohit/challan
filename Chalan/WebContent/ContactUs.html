@@ -1,0 +1,82 @@
+<html>
+<head>
+    <style type="text/css">
+        
+        .content{
+            padding: 150px 0;
+            
+        }
+        .Heading{
+			padding: 40px 0;
+			background-color: black;
+			height: 30px;
+		}h1
+		{
+			color: white;
+			text-align: center;
+			margin-top: 4px;
+		}
+    </style>
+</head><body>
+<form action="" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") 
+    { 
+        alert('Name is required.');
+        frm.Name.focus();
+        return false;
+      }
+if (frm.FromEmailAddress.value == "") 
+    { 
+        alert('Email address is required.');
+        frm.FromEmailAddress.focus();
+         return false;
+     }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1)
+ {
+  alert('Please enter a valid email address.');
+   frm.FromEmailAddress.focus(); 
+   return false;
+    }
+if (frm.Comments.value == "")
+ { 
+    alert('Please enter comments or questions.');
+     frm.Comments.focus();
+      return false;
+ }
+    return true;
+ }
+</script>
+
+
+<div class ="Heading">
+		<center>
+    	<h1 > Contact Us</h1>
+    	</center>
+	</div>
+
+<div class ="content">
+<center>
+   
+<h2> Ask Anything Relavent And we Will Be Reaching Out To You As Quickly As Possible !!</h2><br>
+<table style="width:550px;border:0;" cellpadding="8" cellspacing="0">
+<tr> <td>
+<label for="Name">Name*:</label>
+</td> <td>
+<input name="Name" type="text" maxlength="60" style="width:250px;" />
+</td> </tr> <tr> <td>
+<label for="Comments">Comments*:</label>
+</td> <td>
+<textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea>
+</td> </tr> <tr> <td>
+* - required fields
+</td> <td>
+<input name="skip_Submit" type="submit" value="Submit" />
+</td> </tr>
+</table>
+</center>
+</div>
+</form>
+</body>
+</html>
